@@ -1,0 +1,158 @@
+/* 
+
+#image1 {
+  position: absolute;
+  width: 220px;
+  height: 220px;
+  left: 2px;
+  top: -39px;
+}
+#image2{
+    position: absolute;
+    left:44.1%;
+    right:0%;
+    top:0%;
+}
+#Loginimage{
+   position: absolute;
+   left:50%;
+   right:0%;
+   top:553px;
+}
+
+#text {
+  position: absolute;
+  width: 200px;
+  height: 34 px;
+  left: 100px;
+  top: 503px;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 33px;
+  display: flex;
+  align-items: center;
+  color:181818;
+}
+button {
+  position: absolute;
+  width: 377px;
+  height: 46px;
+  left: 101px;
+  top: 581px;
+  background: #4f65f6;
+  border-radius: 5px;
+  color: white;
+} */
+
+div, body{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+.home-container{
+    max-width: 100vw;
+    overflow: hidden;
+}
+
+#right-top-banner{
+    position: absolute;
+    right: 0;
+    top: 0;
+    max-width: 30em;
+}
+
+#logo{
+    top: 4em;
+    left: 4em;
+    position: absolute;
+}
+
+#left-bottom-banner{
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    width: auto;
+    max-width: 30em;
+}
+
+.left-container{
+    width: 40em;
+    height: 100vh;
+    color: black;
+    padding-left: 4em;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    flex-direction: column;
+}
+
+.button{
+    width: 377px;
+    height: 46px;
+    background: #4F65F6;
+    border-radius: 5px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height:46px;
+    /* identical to box height */
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #FFFFFF;
+    justify-content: center;
+    margin-top: 0.4em;
+}
+
+.heading{
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 2em;
+    line-height: 33px;
+    display: flex;
+    align-items: center;
+    color: #181818;
+    max-width: 10em;
+}
+
+@media only screen and (max-width: 600px) {
+    #left-bottom-banner{
+        display: none;
+    }  
+    
+    .left-container{
+        padding: 0em 2em;
+        width: 100%;
+    }
+
+    #right-top-banner{
+        max-width: 15em;
+    }
+
+    #logo{
+        top: 2em;
+        left: 2em;
+        max-width: 9em;
+    }
+
+    .button{
+        width: 100%;
+    }
+    
+}
+
+@media only screen and (max-width: 1000px) {
+    #left-bottom-banner{
+        display: none;
+    }  
+
+    .left-container{
+        align-items: center;
+        width: 100%;
+    }
+}
