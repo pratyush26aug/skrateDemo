@@ -24,7 +24,9 @@ const Main = () =>{
             })
     }  
 
-    const populateOverView = ()
+    const populateOverView = (dashboard_stats)=> {
+        return 'Hello World'
+    }
 
     useEffect(()=>{
         console.log('I ran ')
