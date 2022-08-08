@@ -76,6 +76,10 @@ const Main = () =>{
         setDashboardStats(newDashboardStats);
     }
 
+    const onProfileClick = (e) =>{
+        fetchUsers()
+    }
+
     const populateJobPosting = (job_postings)=> {
         return job_postings.map( item => {
             return(
@@ -140,7 +144,7 @@ const Main = () =>{
                       Sign Out  
                 </div>
                 <div className="header-user-details">
-                    <div className="image-user">
+                    <div className="image-user" onClick={(e)=>onProfileClick()}>
                         <img src={UserImage} alt="user" />
                     </div>
                     <div className="name-user">
