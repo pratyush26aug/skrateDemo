@@ -25,13 +25,30 @@ const Main = () =>{
     }  
 
     const populateOverView = (dashboard_stats)=> {
-        return 'Hello World'
+        let keys = Object.keys(dashboard_stats)
+        return keys.map(key =>{
+            let label = key.split('_').join(' ');
+            return (
+                <div className='overview-card-container'>
+                    <div className='label'>{label}</div>
+                    <div className='value'>{dashboard_stats[key]}</div>
+                </div>
+            )
+        })
+    }
+
+    const populateJobPosting = (job_postings)=> {
+        return job_postings.map( item => item.role)
+    }
+
+    const populateUpcomingSessions = (upcoming_sessions)=> {
+        return upcoming_sessions.map( item => item.mentor_name)
     }
 
     useEffect(()=>{
         console.log('I ran ')
         fetchUsers()
-    });
+    },[]);
     return(
         <div className='container'>
         <div className='header'>
@@ -68,6 +85,9 @@ const Main = () =>{
                 <div className='left-content'>
                     <div className='content-box overview'>
                         <div className='content-box-header'>
+                            Overview
+                        </div>
+                        <div className='content-box-body'>
                             {populateOverView(dashboardStats)}
                         </div>
                     </div>
@@ -75,12 +95,18 @@ const Main = () =>{
                         <div className='content-box-header'>
                             Upcoming Sessions
                         </div>
+                        <div className='content-box-body'>
+                            {populateUpcomingSessions(upcomingSessions)}
+                        </div>
                     </div>
                 </div>
                 <div className='right-content '>
                     <div className='content-box jobs'>
                         <div className='content-box-header'>
                             Jobs
+                        </div>
+                        <div className='content-box-body overview'>
+                            {populateJobPosting(jobPostings)}
                         </div>
                     </div>
                 </div>

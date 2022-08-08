@@ -113,3 +113,46 @@
     width: 5em;
     justify-content: center;
 }
+
+.overview > .content-box-body{
+    display: grid;
+    grid-template-columns: auto auto;
+}
+
+.overview-card-container{
+    display: flex;
+    min-width: 10em;
+    min-height: 6em;
+    background: #F6F7FF;
+    border-radius: 5px;
+    justify-content: space-between;
+    padding: 1em;
+    margin: 1em;
+}
+
+.overview-card-container > div{
+    text-transform: capitalize;
+}
+
+.overview-card-container > .label{
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 36px;
+    display: flex;
+    align-items: center;
+    color: #181818;
+}
+
+.overview-card-container > .value{
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 48px;
+    line-height: 72px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #4F65F6;
+}
