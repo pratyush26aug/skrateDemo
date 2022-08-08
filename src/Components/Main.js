@@ -43,6 +43,39 @@ const Main = () =>{
         })
     }
 
+    const shuffleArray = (array) => {
+        let currentIndex = array.length,  randomIndex;
+      
+        // While there remain elements to shuffle.
+        while (currentIndex != 0) {
+      
+          // Pick a remaining element.
+          randomIndex = Math.floor(Math.random() * currentIndex);
+          currentIndex--;
+      
+          // And swap it with the current element.
+          [array[currentIndex], array[randomIndex]] = [
+            array[randomIndex], array[currentIndex]];
+        }
+      
+        return array;
+      }
+
+    const shuffle = (e)=>{
+        // shuffling upcoming sessions .
+        let temp = upcomingSessions[0];
+        let new_upcoming_seesion = [upcomingSessions[1],temp];
+        setUpcomingSessions(new_upcoming_seesion);
+        // randomly shuffling new jobs 
+        setJobPostings(shuffleArray(jobPostings));
+        // shuffling overview
+        let overview_keys = Object.keys(dashboardStats);
+        let shuffled_overview_keys = shuffleArray(overview_keys);
+        let newDashboardStats = {}
+        shuffled_overview_keys.map(item => newDashboardStats[item] = dashboardStats[item]);
+        setDashboardStats(newDashboardStats);
+    }
+
     const populateJobPosting = (job_postings)=> {
         return job_postings.map( item => {
             return(
@@ -123,7 +156,7 @@ const Main = () =>{
                     <img src={Home} alt="home" />
                     <div>Home</div>
                 </div>
-                <div className='menu-item'>
+                <div className='menu-item' onClick={(e)=>shuffle(e)}>
                     <img src={Shuffle} alt="shuffle" />
                     <div>Shuffle</div>
                 </div>
