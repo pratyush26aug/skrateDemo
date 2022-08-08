@@ -3,13 +3,17 @@ import '../Styles/Main.css';
 import Skrate from '../Styles/Skrate.png';
 import Shuffle from '../Styles/shuffle.svg';
 import Home from '../Styles/home.svg';
-
+import {
+    useNavigate,
+  } from "react-router-dom";
+import { unAuthUser } from './../helpers/auth';
 
 const Main = () =>{
     const [user,setUser] = useState('');
     const [dashboardStats,setDashboardStats] = useState({});
     const [jobPostings,setJobPostings] = useState([]);
     const [upcomingSessions, setUpcomingSessions] = useState([]);
+    const navigate = useNavigate();
 
     const fetchUsers =  () => {
         fetch('https://mocki.io/v1/bb11aecd-ba61-44b9-9e2c-beabc442d818')
@@ -45,6 +49,11 @@ const Main = () =>{
         return upcoming_sessions.map( item => item.mentor_name)
     }
 
+    const onLogoutClick = (e) => {
+        unAuthUser();
+        navigate('/')
+    }
+
     useEffect(()=>{
         console.log('I ran ')
         fetchUsers()
@@ -56,7 +65,7 @@ const Main = () =>{
                 <img src={Skrate} alt="logo" />
             </div>
             <div className='header-right-container'>
-                <div className="header-sign-out-button">
+                <div className="header-sign-out-button" onClick={(e)=>onLogoutClick(e)}>
                     SignOut
                 </div>
                 <div className="header-user-details">
