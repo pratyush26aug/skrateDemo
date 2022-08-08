@@ -1,158 +1,227 @@
-.body{
-    display:flex;
-    justify-content: start;
+.body {
+  display: flex;
+  justify-content: start;
 }
-.container{
-    max-width: 100vw;
-    overflow: hidden;
-}
-
-.header{
-    display: flex;
-    justify-content: space-between;
-    margin: 2em 3em;
-    height: 4em;
+.container {
+  max-width: 100vw;
+  overflow: hidden;
 }
 
-.header-right-container{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+.header {
+  display: flex;
+  justify-content: space-between;
+  margin: 2em 3em;
+  height: 4em;
 }
 
-.header-user-details{
+.header-right-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-user-details {
     display: flex;
-    width: 7em;
+    width: 8em;
+    height: 3em;
     justify-content: space-between;
     margin-left: 3em;
-}
-
-.side-bar{
-    width: 100%;
-    max-width: 10em;
-}
-
-.content{
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-}
-
-.content > div{
-    min-width: 30em;
-    width: 100%;
-    margin: 0em 1em;
-}
-
-.content-box{
-    background: #FFFFFF;
-    border: 1px solid #FDFDFD;
-    box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.25);
-    border-radius: 10px;
-    width: 100%;
-    height: 100%;
-}
-
-.left-content{
-    display: flex;
-    flex-direction: column;
-}
-.overview{
-    margin-bottom: 1em;
-}
-
-.content-box-header{
-    font-family: 'Poppins';
-    font-style: normal;
-    font-weight: 500;
-    font-size: 32px;
-    line-height: 48px;
-    display: flex;
     align-items: center;
-    color: #181818;
 }
 
-.menu-item{
+.header-user-details> div > img {
+    height: 3em;
+    width: 3em;
+}
+
+.side-bar {
+  width: 100%;
+  max-width: 10em;
+}
+
+.content {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.content > div {
+  min-width: 30em;
+  width: 100%;
+  margin: 0em 1em;
+}
+
+.content-box {
+  background: #ffffff;
+  border: 1px solid #fdfdfd;
+  box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+  width: 100%;
+  height: 100%;
+}
+
+.left-content {
+  display: flex;
+  flex-direction: column;
+}
+.overview {
+  margin-bottom: 1em;
+}
+
+.content-box-header {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 48px;
+  display: flex;
+  align-items: center;
+  color: #181818;
+  padding:1em;
+}
+
+.menu-item {
+  display: flex;
+  justify-content: start;
+  margin-bottom: 3em;
+  padding-left: 3em;
+  cursor: pointer;
+}
+
+.side-bar {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+
+.menu-item-active {
+  border-left: 5px solid #4f65f6;
+  border-radius: 0px 5px 5px 0px;
+}
+
+.menu-item > img {
+  display: flex;
+  margin-right: 1em;
+  height: 1em;
+  width: 1em;
+}
+
+.header-sign-out-button {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 36px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: #ffffff;
+  background: #4f65f6;
+  border-radius: 5px;
+  width: 5em;
+  justify-content: center;
+}
+
+.overview > .content-box-body {
+  display: grid;
+  grid-template-columns: auto auto;
+}
+
+.overview-card-container {
+  display: flex;
+  min-width: 10em;
+  min-height: 6em;
+  background: #f6f7ff;
+  border-radius: 5px;
+  justify-content: space-between;
+  padding: 1em;
+  margin: 1em;
+}
+
+.overview-card-container > div {
+  text-transform: capitalize;
+}
+
+.overview-card-container > .label {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 36px;
+  display: flex;
+  align-items: center;
+  color: #181818;
+}
+
+.overview-card-container > .value {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 48px;
+  line-height: 72px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: #4f65f6;
+}
+
+.jobposting-card-container {
+  box-sizing: border-box;
+  display: flex;
+  background: #ffffff;
+  border: 1px solid #fdfdfd;
+  border-radius: 5px;
+  justify-content: space-evenly;
+  margin: 0.5em 1em;
+  height: 8em;
+}
+
+.job {
+  height: 100%;
+  max-height: 35em;
+  overflow: auto;
+}
+
+.jobposting-image {
+  width: 5em;
+  height: 5em;
+}
+
+.jobposting-image > .mentor-name{
+    margin-top: 1em;
+}
+
+ .time{
+    margin-top: 0.5em;
+}
+
+.jobposting-image > img {
+  border-radius: 5em;
+  width: auto;
+  height: 100%;
+}
+.upcoming-session-container {
+    box-sizing: border-box;
     display: flex;
-    justify-content: start;
-    margin-bottom: 3em;
-    padding-left: 3em;
-    cursor: pointer;
-}
-
-.side-bar{
-    display: flex;
-    flex-direction: column;
-    align-items: start;
-}
-
-.menu-item-active{
-    border-left: 5px solid #4F65F6 ;
-    border-radius: 0px 5px 5px 0px;
-}
-
-.menu-item > img{
-    display: flex;
-    margin-right: 1em;
-    height: 1em;
-    width: 1em;
-}
-
-.header-sign-out-button{
-    font-family: 'Poppins';
-    font-style: normal;
-    font-weight: 500;
-    font-size: 24px;
-    line-height: 36px;
-    display: flex;
-    align-items: center;
-    text-align: center;
-    color: #FFFFFF;
-    background: #4F65F6;
+    background: #ffffff;
+    border: 1px solid #fdfdfd;
     border-radius: 5px;
+    justify-content: space-evenly;
+    margin: 1em 1em;
+    height: 8em;
+    overflow: auto;
+
+  }
+
+  .upcoming-session-container > .button{
+    margin-top:0.3em;
     width: 5em;
-    justify-content: center;
-}
+    height: 1em;
+    padding:1em 0em;
+    background-color: #E8C9D1;
+    color:#181818;
+  }
 
-.overview > .content-box-body{
-    display: grid;
-    grid-template-columns: auto auto;
-}
-
-.overview-card-container{
-    display: flex;
-    min-width: 10em;
-    min-height: 6em;
-    background: #F6F7FF;
-    border-radius: 5px;
-    justify-content: space-between;
-    padding: 1em;
-    margin: 1em;
-}
-
-.overview-card-container > div{
-    text-transform: capitalize;
-}
-
-.overview-card-container > .label{
-    font-family: 'Poppins';
-    font-style: normal;
-    font-weight: 500;
-    font-size: 24px;
-    line-height: 36px;
-    display: flex;
-    align-items: center;
-    color: #181818;
-}
-
-.overview-card-container > .value{
-    font-family: 'Poppins';
-    font-style: normal;
-    font-weight: 500;
-    font-size: 48px;
-    line-height: 72px;
-    display: flex;
-    align-items: center;
-    text-align: center;
-    color: #4F65F6;
-}
+  .upcoming-session-container > .Arrow{
+    margin-top:1em;
+  }

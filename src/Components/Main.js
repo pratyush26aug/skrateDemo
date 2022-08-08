@@ -2,7 +2,9 @@ import React, { useEffect, useState } from 'react';
 import '../Styles/Main.css';
 import Skrate from '../Styles/Skrate.png';
 import Shuffle from '../Styles/shuffle.svg';
+import Arrow from '../Styles/Arrow.png';
 import Home from '../Styles/home.svg';
+import UserImage from '../Styles/User.png';
 import {
     useNavigate,
   } from "react-router-dom";
@@ -42,11 +44,47 @@ const Main = () =>{
     }
 
     const populateJobPosting = (job_postings)=> {
-        return job_postings.map( item => item.role)
+        return job_postings.map( item => {
+            return(
+              <div className='jobposting-card-container'>
+                <div className='jobposting-image'>
+                    <img src={UserImage} alt=""/>
+                </div>
+                <div className='jobposting-image'>
+                    <div className='role'>{item.role}</div>
+                    <div className='organization'>{item.organization_name}</div>
+                    <div className='location'>{item.location}</div>
+                </div>
+                <div className=''>{'2 Days ago'}</div>
+                <div className='organization'>
+                    <img src={Arrow} alt=""/>
+                </div>
+              </div>
+            )
+        });
     }
 
     const populateUpcomingSessions = (upcoming_sessions)=> {
-        return upcoming_sessions.map( item => item.mentor_name)
+        return upcoming_sessions.map( item =>{
+            return(
+                <div className='upcoming-session-container'>
+                    <div className='upcoming-user-image'>
+                         <img src={UserImage} alt=""/>
+                    </div>
+                    <div className='jobposting-image'>
+                         <div className='mentor-name'>{item.mentor_name}</div>
+                    </div>
+                    <div className='time'>
+                         <div className='timings'>{item.timings}</div>
+                         <div className='date'>{item.date}</div>
+                    </div>
+                    <div className='button'>{item.session_type}</div>
+                    <div className='Arrow'>
+                         <img src={Arrow} alt=""/>
+                    </div>
+                </div>
+            )
+        })
     }
 
     const onLogoutClick = (e) => {
@@ -66,11 +104,11 @@ const Main = () =>{
             </div>
             <div className='header-right-container'>
                 <div className="header-sign-out-button" onClick={(e)=>onLogoutClick(e)}>
-                    SignOut
+                      Sign Out  
                 </div>
                 <div className="header-user-details">
                     <div className="image-user">
-                        <img src={''} alt="user" />
+                        <img src={UserImage} alt="user" />
                     </div>
                     <div className="name-user">
                         <span>{user}</span>
