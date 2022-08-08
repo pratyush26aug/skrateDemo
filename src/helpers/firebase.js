@@ -5,12 +5,12 @@ import { initializeApp } from "firebase/app";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyDIs_xnvjw06WjCR5ej34I9XPGTLXn015Q",
-  authDomain: "skrate-auth-edbc4.firebaseapp.com",
-  projectId: "skrate-auth-edbc4",
-  storageBucket: "skrate-auth-edbc4.appspot.com",
-  messagingSenderId: "1068579638108",
-  appId: "1:1068579638108:web:b75e7134b79e4dcc394f99"
+  apiKey: "",
+  authDomain: "",
+  projectId: "",
+  storageBucket: "",
+  messagingSenderId: "",
+  appId: ""
 };
 
 // Initialize Firebase
